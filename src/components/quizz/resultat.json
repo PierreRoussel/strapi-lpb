@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_quizz_resultats",
+  "info": {
+    "displayName": "Resultat",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Reponse_moyenne": {
+      "type": "integer"
+    },
+    "Description": {
+      "type": "richtext"
+    }
+  }
+}

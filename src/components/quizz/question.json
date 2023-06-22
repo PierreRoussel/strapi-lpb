@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_quizz_questions",
+  "info": {
+    "displayName": "Question",
+    "icon": "splotch",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Question": {
+      "type": "string",
+      "required": true
+    },
+    "Description_courte": {
+      "type": "text"
+    },
+    "Illustration": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Reponses": {
+      "displayName": "Reponse",
+      "type": "component",
+      "repeatable": true,
+      "component": "quizz.reponse"
+    }
+  }
+}

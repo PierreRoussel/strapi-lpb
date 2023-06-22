@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_quizz_reponses",
+  "info": {
+    "displayName": "Reponse",
+    "icon": "air-freshener"
+  },
+  "options": {},
+  "attributes": {
+    "Reponse": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quizzes",
+  "info": {
+    "singularName": "quizz",
+    "pluralName": "quizzes",
+    "displayName": "quizz",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titre": {
+      "type": "string"
+    },
+    "Illustration": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Description": {
+      "type": "text",
+      "required": true,
+      "default": "Un quizz pour tester votre niveau de stress"
+    },
+    "Couleur": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "Questions": {
+      "displayName": "Question",
+      "type": "component",
+      "repeatable": true,
+      "component": "quizz.question"
+    },
+    "Resultat": {
+      "type": "component",
+      "repeatable": true,
+      "component": "quizz.resultat"
+    }
+  }
+}
