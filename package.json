@@ -16,7 +16,8 @@
     "@strapi/plugin-users-permissions": "4.5.3",
     "@strapi/provider-upload-cloudinary": "^4.6.0",
     "@strapi/strapi": "4.5.3",
-    "mysql": "2.18.1"
+    "mysql": "2.18.1",
+    "strapi-plugin-populate-deep": "^2.0.0"
   },
   "author": {
     "name": "ROUSSEL Pierre"
