@@ -2,11 +2,15 @@
   "collectionName": "components_linktree_liens",
   "info": {
     "displayName": "Lien",
-    "icon": "globe-africa"
+    "icon": "globe-africa",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Lien": {
+      "type": "string"
+    },
+    "Nom": {
       "type": "string"
     }
   }

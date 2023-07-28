@@ -4,7 +4,8 @@
   "info": {
     "singularName": "linktree",
     "pluralName": "linktrees",
-    "displayName": "Linktree"
+    "displayName": "Linktree",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +16,7 @@
     }
   },
   "attributes": {
-    "Nom": {
+    "Lien": {
       "displayName": "Lien",
       "type": "component",
       "repeatable": true,
@@ -26,6 +27,22 @@
       },
       "component": "linktree.lien",
       "required": true
+    },
+    "Titre": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "Description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }
