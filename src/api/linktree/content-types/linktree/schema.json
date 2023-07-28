@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "linktrees",
+  "info": {
+    "singularName": "linktree",
+    "pluralName": "linktrees",
+    "displayName": "Linktree"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Nom": {
+      "displayName": "Lien",
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "linktree.lien",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_linktree_liens",
+  "info": {
+    "displayName": "Lien",
+    "icon": "globe-africa"
+  },
+  "options": {},
+  "attributes": {
+    "Lien": {
+      "type": "string"
+    }
+  }
+}
