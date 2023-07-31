@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_seo_seo_metadatas",
+  "info": {
+    "displayName": "SeoMetadatas",
+    "icon": "air-freshener"
+  },
+  "options": {},
+  "attributes": {
+    "Titre_page": {
+      "type": "string"
+    }
+  }
+}
