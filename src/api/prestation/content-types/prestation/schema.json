@@ -149,6 +149,17 @@
         }
       },
       "component": "basic.bouton"
+    },
+    "zone_milieu": {
+      "displayName": "wide_bloc_cta",
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "basic.wide-bloc-cta"
     }
   }
 }

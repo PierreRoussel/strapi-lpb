@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_basic_wide_bloc_ctas",
+  "info": {
+    "displayName": "wide_bloc_cta",
+    "icon": "atlas"
+  },
+  "options": {},
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "texte": {
+      "type": "text"
+    },
+    "illustration": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "ctas": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.bouton"
+    },
+    "couleur": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    }
+  }
+}

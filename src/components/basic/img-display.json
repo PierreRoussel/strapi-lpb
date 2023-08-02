@@ -2,25 +2,27 @@
   "collectionName": "components_basic_img_displays",
   "info": {
     "displayName": "ImgDisplay",
-    "icon": "address-card"
+    "icon": "address-card",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "titre": {
       "type": "string"
     },
-    "texte": {
-      "type": "text"
-    },
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "texte": {
+      "type": "richtext"
     }
   }
 }
