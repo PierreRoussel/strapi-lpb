@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_basic_bloc_ctas",
+  "info": {
+    "displayName": "bloc_cta",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "texte": {
+      "type": "text"
+    },
+    "bouton": {
+      "displayName": "bouton",
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.bouton"
+    }
+  }
+}

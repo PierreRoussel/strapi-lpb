@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_basic_boutons",
+  "info": {
+    "displayName": "bouton",
+    "icon": "arrow-alt-circle-right"
+  },
+  "options": {},
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "lien": {
+      "type": "string"
+    }
+  }
+}

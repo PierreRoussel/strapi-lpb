@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_basic_img_displays",
+  "info": {
+    "displayName": "ImgDisplay",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "texte": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

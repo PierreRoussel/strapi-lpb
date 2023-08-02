@@ -107,6 +107,48 @@
           "localized": true
         }
       }
+    },
+    "Image_et_texte": {
+      "displayName": "ImgDisplay",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "basic.img-display"
+    },
+    "Image_et_texte_du_bas": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "basic.img-display"
+    },
+    "Cta_du_bas": {
+      "displayName": "bloc_cta",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "basic.bloc-cta"
+    },
+    "bouton_du_haut": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "basic.bouton"
     }
   }
 }
