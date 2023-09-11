@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "cta_global_ateliers",
+  "info": {
+    "singularName": "cta-global-atelier",
+    "pluralName": "cta-global-ateliers",
+    "displayName": "CTA Global atelier"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bloc_cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.bloc-cta"
+    }
+  }
+}

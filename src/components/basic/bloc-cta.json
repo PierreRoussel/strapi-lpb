@@ -2,21 +2,37 @@
   "collectionName": "components_basic_bloc_ctas",
   "info": {
     "displayName": "bloc_cta",
-    "icon": "ad"
+    "icon": "ad",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "titre": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "texte": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "bouton": {
       "displayName": "bouton",
       "type": "component",
       "repeatable": false,
       "component": "basic.bouton"
+    },
+    "illustration": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "couleur_fond": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
     }
   }
 }
