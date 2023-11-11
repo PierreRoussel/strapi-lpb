@@ -2,33 +2,35 @@
   "collectionName": "components_podcast_podcasts",
   "info": {
     "displayName": "podcasts",
-    "icon": "play"
+    "icon": "play",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "titre_podcast": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "description_podcast": {
       "type": "text",
       "required": true
     },
     "image_podcast": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "audio_podcast": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "lien_spotify": {
       "type": "string"
