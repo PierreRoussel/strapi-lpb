@@ -2,12 +2,16 @@
   "collectionName": "components_seo_seo_metadatas",
   "info": {
     "displayName": "SeoMetadatas",
-    "icon": "air-freshener"
+    "icon": "air-freshener",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Titre_page": {
       "type": "string"
+    },
+    "Description_page": {
+      "type": "text"
     }
   }
 }

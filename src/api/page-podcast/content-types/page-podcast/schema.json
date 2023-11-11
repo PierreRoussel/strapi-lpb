@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_podcasts",
+  "info": {
+    "singularName": "page-podcast",
+    "pluralName": "page-podcasts",
+    "displayName": "page_podcast"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titre": {
+      "type": "string",
+      "required": true
+    },
+    "sous_titre": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "metadatas": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-metadatas"
+    },
+    "podcast": {
+      "displayName": "podcasts",
+      "type": "component",
+      "repeatable": true,
+      "component": "podcast.podcasts"
+    }
+  }
+}
