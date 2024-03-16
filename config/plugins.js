@@ -19,4 +19,16 @@ module.exports = ({env}) => ({
       },
     },
   },
+  email: {
+    config: {
+      provider: 'strapi-provider-email-resend',
+      providerOptions: {
+        apiKey: env('RESEND_API_KEY'),
+      },
+      settings: {
+        defaultFrom: 'cabinet.bien-etre@resend.dev',
+        defaultReplyTo: 'cabinet.bien-etre@lepetitbourgeon.fr',
+      },
+    }
+  },
 });
