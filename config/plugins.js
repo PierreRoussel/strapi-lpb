@@ -1,16 +1,16 @@
-module.exports = ({env}) => ({
-  'strapi-plugin-populate-deep': {
+module.exports = ({ env }) => ({
+  "strapi-plugin-populate-deep": {
     config: {
       defaultDepth: 5, // Default is 5
-    }
+    },
   },
   upload: {
     config: {
       provider: "cloudinary",
       providerOptions: {
-        cloud_name: env('CLOUD_NAME',''),
-        api_key: env('CLOUD_API_KEY',''),
-        api_secret: env('CLOUD_API_SECRET',''),
+        cloud_name: env("CLOUD_NAME", ""),
+        api_key: env("CLOUD_API_KEY", ""),
+        api_secret: env("CLOUD_API_SECRET", ""),
       },
       actionOptions: {
         upload: {},
@@ -21,14 +21,15 @@ module.exports = ({env}) => ({
   },
   email: {
     config: {
-      provider: 'strapi-provider-email-resend',
+      provider: "strapi-provider-email-brevo",
       providerOptions: {
-        apiKey: env('RESEND_API_KEY'),
+        apiKey: env("BREVO_API_KEY", ""),
       },
       settings: {
-        defaultFrom: 'cabinet.bien-etre@resend.dev',
-        defaultReplyTo: 'cabinet.bien-etre@lepetitbourgeon.fr',
+        defaultSenderEmail: "cabinet.bien-etre@lepetitbourgeon.fr",
+        defaultSenderName: "Le Petit Bourgeon",
+        defaultReplyTo: "cabinet.bien-etre@lepetitbourgeon.fr",
       },
-    }
+    },
   },
 });
