@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_conferences",
+  "info": {
+    "singularName": "page-conference",
+    "pluralName": "page-conferences",
+    "displayName": "page_conference",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titre": {
+      "type": "string",
+      "required": true
+    },
+    "sous_titre": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "metadatas": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-metadatas"
+    },
+    "conference": {
+      "type": "component",
+      "repeatable": true,
+      "component": "podcast.podcasts"
+    }
+  }
+}

@@ -874,6 +874,49 @@ export interface ApiCtaGlobalAtelierCtaGlobalAtelier extends Schema.SingleType {
   };
 }
 
+export interface ApiEvenementEvenement extends Schema.CollectionType {
+  collectionName: 'evenements';
+  info: {
+    singularName: 'evenement';
+    pluralName: 'evenements';
+    displayName: 'Evenement';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    titre: Attribute.String;
+    date: Attribute.DateTime;
+    lieu: Attribute.String;
+    lienVersLeLieu: Attribute.String;
+    prix: Attribute.String;
+    lienPlusDinfos: Attribute.String;
+    lienInscription: Attribute.String;
+    type_evenement: Attribute.Relation<
+      'api::evenement.evenement',
+      'oneToOne',
+      'api::type-evenement.type-evenement'
+    >;
+    illustration: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::evenement.evenement',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::evenement.evenement',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiLinktreeLinktree extends Schema.SingleType {
   collectionName: 'linktrees';
   info: {
@@ -931,6 +974,40 @@ export interface ApiLinktreeLinktree extends Schema.SingleType {
       'api::linktree.linktree'
     >;
     locale: Attribute.String;
+  };
+}
+
+export interface ApiPageConferencePageConference extends Schema.SingleType {
+  collectionName: 'page_conferences';
+  info: {
+    singularName: 'page-conference';
+    pluralName: 'page-conferences';
+    displayName: 'page_conference';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    titre: Attribute.String & Attribute.Required;
+    sous_titre: Attribute.String;
+    description: Attribute.RichText;
+    metadatas: Attribute.Component<'seo.seo-metadatas'>;
+    conference: Attribute.Component<'podcast.podcasts', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::page-conference.page-conference',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::page-conference.page-conference',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
   };
 }
 
@@ -1231,6 +1308,37 @@ export interface ApiReseauReseau extends Schema.CollectionType {
   };
 }
 
+export interface ApiTypeEvenementTypeEvenement extends Schema.CollectionType {
+  collectionName: 'type_evenements';
+  info: {
+    singularName: 'type-evenement';
+    pluralName: 'type-evenements';
+    displayName: 'type evenement';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    type: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::type-evenement.type-evenement',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::type-evenement.type-evenement',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1250,12 +1358,15 @@ declare module '@strapi/types' {
       'api::article.article': ApiArticleArticle;
       'api::category.category': ApiCategoryCategory;
       'api::cta-global-atelier.cta-global-atelier': ApiCtaGlobalAtelierCtaGlobalAtelier;
+      'api::evenement.evenement': ApiEvenementEvenement;
       'api::linktree.linktree': ApiLinktreeLinktree;
+      'api::page-conference.page-conference': ApiPageConferencePageConference;
       'api::page-podcast.page-podcast': ApiPagePodcastPagePodcast;
       'api::places-bien-etre.places-bien-etre': ApiPlacesBienEtrePlacesBienEtre;
       'api::prestation.prestation': ApiPrestationPrestation;
       'api::quizz.quizz': ApiQuizzQuizz;
       'api::reseau.reseau': ApiReseauReseau;
+      'api::type-evenement.type-evenement': ApiTypeEvenementTypeEvenement;
     }
   }
 }
