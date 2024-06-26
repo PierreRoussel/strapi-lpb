@@ -43,6 +43,19 @@ export interface BasicImgDisplay extends Schema.Component {
   };
 }
 
+export interface BasicLieux extends Schema.Component {
+  collectionName: 'components_basic_lieuxes';
+  info: {
+    displayName: 'lieux';
+  };
+  attributes: {
+    titre: Attribute.String;
+    adresse: Attribute.String;
+    description: Attribute.String;
+    image: Attribute.Media;
+  };
+}
+
 export interface BasicWideBlocCta extends Schema.Component {
   collectionName: 'components_basic_wide_bloc_ctas';
   info: {
@@ -149,6 +162,7 @@ declare module '@strapi/types' {
       'basic.bloc-cta': BasicBlocCta;
       'basic.bouton': BasicBouton;
       'basic.img-display': BasicImgDisplay;
+      'basic.lieux': BasicLieux;
       'basic.wide-bloc-cta': BasicWideBlocCta;
       'linktree.lien': LinktreeLien;
       'podcast.podcasts': PodcastPodcasts;

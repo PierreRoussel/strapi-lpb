@@ -977,6 +977,37 @@ export interface ApiLinktreeLinktree extends Schema.SingleType {
   };
 }
 
+export interface ApiOuMeTrouverOuMeTrouver extends Schema.SingleType {
+  collectionName: 'ou_me_trouvers';
+  info: {
+    singularName: 'ou-me-trouver';
+    pluralName: 'ou-me-trouvers';
+    displayName: 'O\u00F9 me trouver';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    titre: Attribute.String;
+    lieu: Attribute.Component<'basic.lieux', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::ou-me-trouver.ou-me-trouver',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::ou-me-trouver.ou-me-trouver',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPageConferencePageConference extends Schema.SingleType {
   collectionName: 'page_conferences';
   info: {
@@ -1360,6 +1391,7 @@ declare module '@strapi/types' {
       'api::cta-global-atelier.cta-global-atelier': ApiCtaGlobalAtelierCtaGlobalAtelier;
       'api::evenement.evenement': ApiEvenementEvenement;
       'api::linktree.linktree': ApiLinktreeLinktree;
+      'api::ou-me-trouver.ou-me-trouver': ApiOuMeTrouverOuMeTrouver;
       'api::page-conference.page-conference': ApiPageConferencePageConference;
       'api::page-podcast.page-podcast': ApiPagePodcastPagePodcast;
       'api::places-bien-etre.places-bien-etre': ApiPlacesBienEtrePlacesBienEtre;

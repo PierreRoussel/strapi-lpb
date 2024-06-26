@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_basic_lieuxes",
+  "info": {
+    "displayName": "lieux"
+  },
+  "options": {},
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "adresse": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
