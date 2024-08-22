@@ -84,6 +84,7 @@ export interface BasicTarif extends Schema.Component {
     DureeEnMinutes: Attribute.Integer;
     Couleur: Attribute.String &
       Attribute.CustomField<'plugin::color-picker.color'>;
+    Description: Attribute.Blocks;
   };
 }
 
