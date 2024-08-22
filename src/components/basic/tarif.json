@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_basic_tarifs",
+  "info": {
+    "displayName": "Tarif",
+    "icon": "information",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Titre": {
+      "type": "string"
+    },
+    "Prix": {
+      "type": "decimal"
+    },
+    "LienCalcom": {
+      "type": "string"
+    },
+    "DureeEnMinutes": {
+      "type": "integer"
+    },
+    "Couleur": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    }
+  }
+}

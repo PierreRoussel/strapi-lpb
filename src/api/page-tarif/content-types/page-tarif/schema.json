@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_tarifs",
+  "info": {
+    "singularName": "page-tarif",
+    "pluralName": "page-tarifs",
+    "displayName": "Page_tarif",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metadatas": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-metadatas"
+    },
+    "Prestations": {
+      "type": "dynamiczone",
+      "components": [
+        "basic.categorie-tarifs"
+      ]
+    }
+  }
+}

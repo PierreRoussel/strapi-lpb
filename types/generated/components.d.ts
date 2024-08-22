@@ -29,6 +29,20 @@ export interface BasicBouton extends Schema.Component {
   };
 }
 
+export interface BasicCategorieTarifs extends Schema.Component {
+  collectionName: 'components_basic_categorie_tarifs';
+  info: {
+    displayName: 'CategorieTarifs';
+    icon: 'apps';
+    description: '';
+  };
+  attributes: {
+    Titre: Attribute.String;
+    Description: Attribute.String;
+    Tarif: Attribute.Component<'basic.tarif', true>;
+  };
+}
+
 export interface BasicImgDisplay extends Schema.Component {
   collectionName: 'components_basic_img_displays';
   info: {
@@ -53,6 +67,23 @@ export interface BasicLieux extends Schema.Component {
     adresse: Attribute.String;
     description: Attribute.String;
     image: Attribute.Media;
+  };
+}
+
+export interface BasicTarif extends Schema.Component {
+  collectionName: 'components_basic_tarifs';
+  info: {
+    displayName: 'Tarif';
+    icon: 'information';
+    description: '';
+  };
+  attributes: {
+    Titre: Attribute.String;
+    Prix: Attribute.Decimal;
+    LienCalcom: Attribute.String;
+    DureeEnMinutes: Attribute.Integer;
+    Couleur: Attribute.String &
+      Attribute.CustomField<'plugin::color-picker.color'>;
   };
 }
 
@@ -161,8 +192,10 @@ declare module '@strapi/types' {
     export interface Components {
       'basic.bloc-cta': BasicBlocCta;
       'basic.bouton': BasicBouton;
+      'basic.categorie-tarifs': BasicCategorieTarifs;
       'basic.img-display': BasicImgDisplay;
       'basic.lieux': BasicLieux;
+      'basic.tarif': BasicTarif;
       'basic.wide-bloc-cta': BasicWideBlocCta;
       'linktree.lien': LinktreeLien;
       'podcast.podcasts': PodcastPodcasts;

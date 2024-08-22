@@ -1076,6 +1076,38 @@ export interface ApiPagePodcastPagePodcast extends Schema.SingleType {
   };
 }
 
+export interface ApiPageTarifPageTarif extends Schema.SingleType {
+  collectionName: 'page_tarifs';
+  info: {
+    singularName: 'page-tarif';
+    pluralName: 'page-tarifs';
+    displayName: 'Page_tarif';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    metadatas: Attribute.Component<'seo.seo-metadatas'>;
+    Prestations: Attribute.DynamicZone<['basic.categorie-tarifs']>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::page-tarif.page-tarif',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::page-tarif.page-tarif',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPlacesBienEtrePlacesBienEtre extends Schema.CollectionType {
   collectionName: 'places_bien_etres';
   info: {
@@ -1394,6 +1426,7 @@ declare module '@strapi/types' {
       'api::ou-me-trouver.ou-me-trouver': ApiOuMeTrouverOuMeTrouver;
       'api::page-conference.page-conference': ApiPageConferencePageConference;
       'api::page-podcast.page-podcast': ApiPagePodcastPagePodcast;
+      'api::page-tarif.page-tarif': ApiPageTarifPageTarif;
       'api::places-bien-etre.places-bien-etre': ApiPlacesBienEtrePlacesBienEtre;
       'api::prestation.prestation': ApiPrestationPrestation;
       'api::quizz.quizz': ApiQuizzQuizz;

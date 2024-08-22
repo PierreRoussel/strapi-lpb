@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_basic_categorie_tarifs",
+  "info": {
+    "displayName": "CategorieTarifs",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Titre": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Tarif": {
+      "displayName": "Tarif",
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.tarif"
+    }
+  }
+}
