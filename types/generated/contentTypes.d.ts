@@ -677,6 +677,39 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiActualiteActualite extends Schema.CollectionType {
+  collectionName: 'actualites';
+  info: {
+    singularName: 'actualite';
+    pluralName: 'actualites';
+    displayName: 'Actualite';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    titre: Attribute.String & Attribute.Required;
+    description: Attribute.Text;
+    lienArticle: Attribute.String;
+    illustration: Attribute.Media & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::actualite.actualite',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::actualite.actualite',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiArticleArticle extends Schema.CollectionType {
   collectionName: 'articles';
   info: {
@@ -1418,6 +1451,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::actualite.actualite': ApiActualiteActualite;
       'api::article.article': ApiArticleArticle;
       'api::category.category': ApiCategoryCategory;
       'api::cta-global-atelier.cta-global-atelier': ApiCtaGlobalAtelierCtaGlobalAtelier;
