@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cibles",
+  "info": {
+    "singularName": "cible",
+    "pluralName": "cibles",
+    "displayName": "Cible",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cible": {
+      "type": "string",
+      "required": true
+    },
+    "illustration": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "texte_presentation": {
+      "type": "text"
+    },
+    "categorie_ressources": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::categorie-ressource.categorie-ressource",
+      "mappedBy": "cible"
+    }
+  }
+}

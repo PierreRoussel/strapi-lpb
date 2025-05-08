@@ -814,6 +814,42 @@ export interface ApiArticleArticle extends Schema.CollectionType {
   };
 }
 
+export interface ApiCategorieRessourceCategorieRessource
+  extends Schema.CollectionType {
+  collectionName: 'categorie_ressources';
+  info: {
+    singularName: 'categorie-ressource';
+    pluralName: 'categorie-ressources';
+    displayName: 'CategorieRessource';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    nom: Attribute.String & Attribute.Required;
+    cible: Attribute.Relation<
+      'api::categorie-ressource.categorie-ressource',
+      'manyToOne',
+      'api::cible.cible'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::categorie-ressource.categorie-ressource',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::categorie-ressource.categorie-ressource',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCategoryCategory extends Schema.CollectionType {
   collectionName: 'categories';
   info: {
@@ -875,6 +911,44 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       'api::category.category'
     >;
     locale: Attribute.String;
+  };
+}
+
+export interface ApiCibleCible extends Schema.CollectionType {
+  collectionName: 'cibles';
+  info: {
+    singularName: 'cible';
+    pluralName: 'cibles';
+    displayName: 'Cible';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cible: Attribute.String & Attribute.Required;
+    illustration: Attribute.Media & Attribute.Required;
+    texte_presentation: Attribute.Text;
+    categorie_ressources: Attribute.Relation<
+      'api::cible.cible',
+      'oneToMany',
+      'api::categorie-ressource.categorie-ressource'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cible.cible',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::cible.cible',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
   };
 }
 
@@ -1453,7 +1527,9 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::actualite.actualite': ApiActualiteActualite;
       'api::article.article': ApiArticleArticle;
+      'api::categorie-ressource.categorie-ressource': ApiCategorieRessourceCategorieRessource;
       'api::category.category': ApiCategoryCategory;
+      'api::cible.cible': ApiCibleCible;
       'api::cta-global-atelier.cta-global-atelier': ApiCtaGlobalAtelierCtaGlobalAtelier;
       'api::evenement.evenement': ApiEvenementEvenement;
       'api::linktree.linktree': ApiLinktreeLinktree;

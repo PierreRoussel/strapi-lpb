@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorie_ressources",
+  "info": {
+    "singularName": "categorie-ressource",
+    "pluralName": "categorie-ressources",
+    "displayName": "CategorieRessource"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string",
+      "required": true
+    },
+    "cible": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cible.cible",
+      "inversedBy": "categorie_ressources"
+    }
+  }
+}
