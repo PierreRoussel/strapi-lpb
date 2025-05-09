@@ -925,10 +925,32 @@ export interface ApiCibleCible extends Schema.CollectionType {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    cible: Attribute.String & Attribute.Required;
-    illustration: Attribute.Media & Attribute.Required;
-    texte_presentation: Attribute.Text;
+    cible: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    illustration: Attribute.Media &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    texte_presentation: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     categorie_ressources: Attribute.Relation<
       'api::cible.cible',
       'oneToMany',
@@ -949,6 +971,12 @@ export interface ApiCibleCible extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::cible.cible',
+      'oneToMany',
+      'api::cible.cible'
+    >;
+    locale: Attribute.String;
   };
 }
 
