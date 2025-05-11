@@ -821,6 +821,7 @@ export interface ApiCategorieRessourceCategorieRessource
     singularName: 'categorie-ressource';
     pluralName: 'categorie-ressources';
     displayName: 'CategorieRessource';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -832,9 +833,9 @@ export interface ApiCategorieRessourceCategorieRessource
       'manyToOne',
       'api::cible.cible'
     >;
-    ressource: Attribute.Relation<
+    ressources: Attribute.Relation<
       'api::categorie-ressource.categorie-ressource',
-      'manyToOne',
+      'manyToMany',
       'api::ressource.ressource'
     >;
     createdAt: Attribute.DateTime;
@@ -1561,7 +1562,7 @@ export interface ApiRessourceRessource extends Schema.CollectionType {
       }>;
     categorie_ressources: Attribute.Relation<
       'api::ressource.ressource',
-      'oneToMany',
+      'manyToMany',
       'api::categorie-ressource.categorie-ressource'
     >;
     createdAt: Attribute.DateTime;

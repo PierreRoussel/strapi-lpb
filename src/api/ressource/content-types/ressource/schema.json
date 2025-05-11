@@ -72,9 +72,9 @@
     },
     "categorie_ressources": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::categorie-ressource.categorie-ressource",
-      "mappedBy": "ressource"
+      "mappedBy": "ressources"
     }
   }
 }

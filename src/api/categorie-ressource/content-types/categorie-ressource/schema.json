@@ -4,7 +4,8 @@
   "info": {
     "singularName": "categorie-ressource",
     "pluralName": "categorie-ressources",
-    "displayName": "CategorieRessource"
+    "displayName": "CategorieRessource",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,9 +22,9 @@
       "target": "api::cible.cible",
       "inversedBy": "categorie_ressources"
     },
-    "ressource": {
+    "ressources": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::ressource.ressource",
       "inversedBy": "categorie_ressources"
     }
