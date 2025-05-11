@@ -832,6 +832,11 @@ export interface ApiCategorieRessourceCategorieRessource
       'manyToOne',
       'api::cible.cible'
     >;
+    ressource: Attribute.Relation<
+      'api::categorie-ressource.categorie-ressource',
+      'manyToOne',
+      'api::ressource.ressource'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1506,6 +1511,83 @@ export interface ApiReseauReseau extends Schema.CollectionType {
   };
 }
 
+export interface ApiRessourceRessource extends Schema.CollectionType {
+  collectionName: 'ressources';
+  info: {
+    singularName: 'ressource';
+    pluralName: 'ressources';
+    displayName: 'Ressource';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    nom: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    illustration: Attribute.Media &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    outils: Attribute.Media &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    presentation: Attribute.RichText &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    categorie_ressources: Attribute.Relation<
+      'api::ressource.ressource',
+      'oneToMany',
+      'api::categorie-ressource.categorie-ressource'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::ressource.ressource',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::ressource.ressource',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::ressource.ressource',
+      'oneToMany',
+      'api::ressource.ressource'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiTypeEvenementTypeEvenement extends Schema.CollectionType {
   collectionName: 'type_evenements';
   info: {
@@ -1569,6 +1651,7 @@ declare module '@strapi/types' {
       'api::prestation.prestation': ApiPrestationPrestation;
       'api::quizz.quizz': ApiQuizzQuizz;
       'api::reseau.reseau': ApiReseauReseau;
+      'api::ressource.ressource': ApiRessourceRessource;
       'api::type-evenement.type-evenement': ApiTypeEvenementTypeEvenement;
     }
   }

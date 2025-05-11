@@ -20,6 +20,12 @@
       "relation": "manyToOne",
       "target": "api::cible.cible",
       "inversedBy": "categorie_ressources"
+    },
+    "ressource": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ressource.ressource",
+      "inversedBy": "categorie_ressources"
     }
   }
 }
