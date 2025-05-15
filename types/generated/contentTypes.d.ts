@@ -1589,6 +1589,43 @@ export interface ApiRessourceRessource extends Schema.CollectionType {
   };
 }
 
+export interface ApiSubscriberSubscriber extends Schema.CollectionType {
+  collectionName: 'subscribers';
+  info: {
+    singularName: 'subscriber';
+    pluralName: 'subscribers';
+    displayName: 'Subscriber';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    mail: Attribute.String & Attribute.Required;
+    approval: Attribute.Boolean & Attribute.DefaultTo<false>;
+    token: Attribute.UID;
+    ressource: Attribute.Relation<
+      'api::subscriber.subscriber',
+      'oneToOne',
+      'api::ressource.ressource'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::subscriber.subscriber',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::subscriber.subscriber',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTypeEvenementTypeEvenement extends Schema.CollectionType {
   collectionName: 'type_evenements';
   info: {
@@ -1653,6 +1690,7 @@ declare module '@strapi/types' {
       'api::quizz.quizz': ApiQuizzQuizz;
       'api::reseau.reseau': ApiReseauReseau;
       'api::ressource.ressource': ApiRessourceRessource;
+      'api::subscriber.subscriber': ApiSubscriberSubscriber;
       'api::type-evenement.type-evenement': ApiTypeEvenementTypeEvenement;
     }
   }

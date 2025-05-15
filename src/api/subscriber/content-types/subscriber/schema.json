@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subscribers",
+  "info": {
+    "singularName": "subscriber",
+    "pluralName": "subscribers",
+    "displayName": "Subscriber",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mail": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "approval": {
+      "type": "boolean",
+      "default": false
+    },
+    "token": {
+      "type": "uid"
+    },
+    "ressource": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ressource.ressource"
+    }
+  }
+}
