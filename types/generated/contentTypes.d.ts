@@ -828,15 +828,15 @@ export interface ApiCategorieRessourceCategorieRessource
   };
   attributes: {
     nom: Attribute.String & Attribute.Required;
-    cible: Attribute.Relation<
-      'api::categorie-ressource.categorie-ressource',
-      'manyToOne',
-      'api::cible.cible'
-    >;
     ressources: Attribute.Relation<
       'api::categorie-ressource.categorie-ressource',
       'manyToMany',
       'api::ressource.ressource'
+    >;
+    cibles: Attribute.Relation<
+      'api::categorie-ressource.categorie-ressource',
+      'manyToMany',
+      'api::cible.cible'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -959,7 +959,7 @@ export interface ApiCibleCible extends Schema.CollectionType {
       }>;
     categorie_ressources: Attribute.Relation<
       'api::cible.cible',
-      'oneToMany',
+      'manyToMany',
       'api::categorie-ressource.categorie-ressource'
     >;
     createdAt: Attribute.DateTime;

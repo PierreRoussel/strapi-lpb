@@ -16,16 +16,16 @@
       "type": "string",
       "required": true
     },
-    "cible": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::cible.cible",
-      "inversedBy": "categorie_ressources"
-    },
     "ressources": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::ressource.ressource",
+      "inversedBy": "categorie_ressources"
+    },
+    "cibles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::cible.cible",
       "inversedBy": "categorie_ressources"
     }
   }
