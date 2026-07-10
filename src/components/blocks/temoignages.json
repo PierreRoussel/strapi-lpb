@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_temoignages",
+  "info": {
+    "displayName": "Temoignages",
+    "icon": "quote",
+    "description": "Slider de témoignages"
+  },
+  "options": {},
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "cta_texte": {
+      "type": "string"
+    },
+    "cta_lien": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.testimonial-entry"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blocks_articles_previews",
+  "info": {
+    "displayName": "ArticlesPreview",
+    "icon": "book",
+    "description": "Aperçu des derniers articles du blog"
+  },
+  "options": {},
+  "attributes": {
+    "nombre": {
+      "type": "integer",
+      "default": 4,
+      "min": 1,
+      "max": 12
+    }
+  }
+}

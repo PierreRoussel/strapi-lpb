@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_blocks_horizontal_card_items",
+  "info": {
+    "displayName": "HorizontalCardItem",
+    "icon": "layout",
+    "description": "Carte horizontale"
+  },
+  "options": {},
+  "attributes": {
+    "titre": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "couleur": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "illustration": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "illustration_url": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_blocks_faqs",
+  "info": {
+    "displayName": "Faq",
+    "icon": "question",
+    "description": "Section FAQ"
+  },
+  "options": {},
+  "attributes": {
+    "section_titre": {
+      "type": "string"
+    },
+    "section_description": {
+      "type": "text"
+    },
+    "section_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "bouton_texte": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.faq-entry"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_blocks_prestations_grids",
+  "info": {
+    "displayName": "PrestationsGrid",
+    "icon": "grid",
+    "description": "Grille des prestations (composant fixe)"
+  },
+  "options": {},
+  "attributes": {}
+}

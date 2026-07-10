@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_section_titles",
+  "info": {
+    "displayName": "SectionTitle",
+    "icon": "heading",
+    "description": "Titre de section avec tag coloré"
+  },
+  "options": {},
+  "attributes": {
+    "titre": {
+      "type": "string",
+      "required": true
+    },
+    "tag_couleur": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "margin_top": {
+      "type": "string"
+    }
+  }
+}

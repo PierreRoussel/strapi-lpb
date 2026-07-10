@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_blocks_testimonial_entries",
+  "info": {
+    "displayName": "TestimonialEntry",
+    "icon": "quote",
+    "description": "Témoignage"
+  },
+  "options": {},
+  "attributes": {
+    "texte": {
+      "type": "text",
+      "required": true
+    },
+    "nom": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string"
+    },
+    "illustration": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_navigation_nav_links",
+  "info": {
+    "displayName": "NavLink",
+    "icon": "link",
+    "description": "Lien de navigation"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "parent": {
+      "type": "boolean",
+      "default": false
+    },
+    "isExternal": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

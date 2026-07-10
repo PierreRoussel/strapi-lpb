@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blocks_rich_texts",
+  "info": {
+    "displayName": "RichText",
+    "icon": "file",
+    "description": "Bloc de texte riche"
+  },
+  "options": {},
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "contenu": {
+      "type": "richtext"
+    }
+  }
+}

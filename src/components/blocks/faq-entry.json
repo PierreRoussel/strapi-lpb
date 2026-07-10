@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_faq_entries",
+  "info": {
+    "displayName": "FaqEntry",
+    "icon": "question",
+    "description": "Entrée FAQ"
+  },
+  "options": {},
+  "attributes": {
+    "titre": {
+      "type": "string",
+      "required": true
+    },
+    "develop": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

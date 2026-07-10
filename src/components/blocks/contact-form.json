@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_contact_forms",
+  "info": {
+    "displayName": "ContactForm",
+    "icon": "envelope",
+    "description": "Formulaire de contact"
+  },
+  "options": {},
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "tag_couleur": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    }
+  }
+}

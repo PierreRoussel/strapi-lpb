@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_blocks_atelier_ctas",
+  "info": {
+    "displayName": "AtelierCta",
+    "icon": "brush",
+    "description": "Bloc CTA atelier global (données Strapi cta-global-atelier)"
+  },
+  "options": {},
+  "attributes": {}
+}

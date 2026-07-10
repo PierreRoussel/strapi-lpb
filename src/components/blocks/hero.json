@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_blocks_heroes",
+  "info": {
+    "displayName": "Hero",
+    "icon": "landscape",
+    "description": "Section hero de la page d'accueil"
+  },
+  "options": {},
+  "attributes": {
+    "illustration": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "baseline_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "texte": {
+      "type": "richtext"
+    },
+    "sous_texte": {
+      "type": "text"
+    },
+    "boutons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.bouton"
+    }
+  }
+}
