@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_faqs",
+  "info": {
+    "singularName": "page-faq",
+    "pluralName": "page-faqs",
+    "displayName": "Page FAQ",
+    "description": "Contenu éditable de la page FAQ"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metadatas": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-metadatas"
+    },
+    "titre": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "bouton_texte": {
+      "type": "string"
+    },
+    "illustration": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "questions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "faq.question"
+    }
+  }
+}
