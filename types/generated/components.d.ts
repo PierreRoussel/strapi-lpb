@@ -105,6 +105,19 @@ export interface BasicWideBlocCta extends Schema.Component {
   };
 }
 
+export interface FaqQuestion extends Schema.Component {
+  collectionName: 'components_faq_questions';
+  info: {
+    displayName: 'Question FAQ';
+    icon: 'question';
+    description: 'Question / r\u00E9ponse de la FAQ';
+  };
+  attributes: {
+    titre: Attribute.String & Attribute.Required;
+    develop: Attribute.Text & Attribute.Required;
+  };
+}
+
 export interface LinktreeLien extends Schema.Component {
   collectionName: 'components_linktree_liens';
   info: {
@@ -198,6 +211,7 @@ declare module '@strapi/types' {
       'basic.lieux': BasicLieux;
       'basic.tarif': BasicTarif;
       'basic.wide-bloc-cta': BasicWideBlocCta;
+      'faq.question': FaqQuestion;
       'linktree.lien': LinktreeLien;
       'podcast.podcasts': PodcastPodcasts;
       'quizz.question': QuizzQuestion;

@@ -1183,6 +1183,42 @@ export interface ApiPageConferencePageConference extends Schema.SingleType {
   };
 }
 
+export interface ApiPageFaqPageFaq extends Schema.SingleType {
+  collectionName: 'page_faqs';
+  info: {
+    singularName: 'page-faq';
+    pluralName: 'page-faqs';
+    displayName: 'Page FAQ';
+    description: 'Contenu \u00E9ditable de la page FAQ';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    metadatas: Attribute.Component<'seo.seo-metadatas'>;
+    titre: Attribute.String;
+    description: Attribute.Text;
+    bouton_texte: Attribute.String;
+    illustration: Attribute.Media;
+    questions: Attribute.Component<'faq.question', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::page-faq.page-faq',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::page-faq.page-faq',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPagePodcastPagePodcast extends Schema.SingleType {
   collectionName: 'page_podcasts';
   info: {
@@ -1683,6 +1719,7 @@ declare module '@strapi/types' {
       'api::linktree.linktree': ApiLinktreeLinktree;
       'api::ou-me-trouver.ou-me-trouver': ApiOuMeTrouverOuMeTrouver;
       'api::page-conference.page-conference': ApiPageConferencePageConference;
+      'api::page-faq.page-faq': ApiPageFaqPageFaq;
       'api::page-podcast.page-podcast': ApiPagePodcastPagePodcast;
       'api::page-tarif.page-tarif': ApiPageTarifPageTarif;
       'api::places-bien-etre.places-bien-etre': ApiPlacesBienEtrePlacesBienEtre;
