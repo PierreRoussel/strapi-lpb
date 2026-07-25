@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_landing_img_textes",
+  "info": {
+    "displayName": "ImgTexte",
+    "icon": "images",
+    "description": "Section image + texte alternée, stats optionnelles"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "titre": {
+      "type": "string",
+      "required": true
+    },
+    "texte": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "reverse": {
+      "type": "boolean",
+      "default": false
+    },
+    "bouton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.bouton"
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "landing.stat-item"
+    }
+  }
+}

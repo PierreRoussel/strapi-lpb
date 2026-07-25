@@ -1,0 +1,150 @@
+[
+  {
+    "titre": "Sophrologie Pas-en-Artois",
+    "slug": "sophrologie-pas-en-artois",
+    "localite": "Pas-en-Artois",
+    "mode": "cabinet",
+    "zones_desservies": "Pas-en-Artois, villages alentour du Ternois et de la vallée de la Authie. Cabinet au 10 Grand Place.",
+    "h1": "Sophrologue à Pas-en-Artois — séances au cabinet",
+    "Metadatas": {
+      "Titre_page": "Sophrologue à Pas-en-Artois | RDV cabinet | Le Petit Bourgeon",
+      "Description_page": "Prenez rendez-vous pour une séance de sophrologie au cabinet de Pas-en-Artois. Accompagnement stress, sommeil et émotions."
+    },
+    "couleur_page": "#6da7a0",
+    "faq": [
+      {
+        "question": "Où se trouve le cabinet à Pas-en-Artois ?",
+        "reponse": "Le cabinet Le Petit Bourgeon est situé au 10 Grand Place, 62760 Pas-en-Artois."
+      },
+      {
+        "question": "Puis-je venir en séance depuis un village voisin ?",
+        "reponse": "Oui. Le cabinet accueille les personnes des communes alentour ; la visio est aussi possible."
+      }
+    ],
+    "hero": {
+      "titre": "Cultivez votre",
+      "titre_emphase": "paix intérieure",
+      "texte": "Séances de sophrologie au cabinet de Pas-en-Artois. Placeholder — remplacer par le texte définitif.",
+      "cta_principal": { "titre": "Prendre rendez-vous", "lien": "/funnel" },
+      "cta_secondaire": { "titre": "Découvrir la sophrologie", "lien": "/prestations/sophrologie" },
+      "note": "4.9/5",
+      "preuve_sociale": "+100 clients accompagnés"
+    },
+    "pages_liees": [
+      { "titre": "Sophrologie à Arras", "lien": "/landing/sophrologie-arras" },
+      { "titre": "Sophrologie à Doullens", "lien": "/landing/sophrologie-doullens" },
+      { "titre": "Sophrologie en visio", "lien": "/landing/sophrologie-visio" },
+      { "titre": "Prendre rendez-vous", "lien": "/funnel" }
+    ]
+  },
+  {
+    "titre": "Sophrologie Arras",
+    "slug": "sophrologie-arras",
+    "localite": "Arras",
+    "mode": "hybride",
+    "zones_desservies": "Arras et agglomération, communes proches ; séances au cabinet de Pas-en-Artois (facilement accessible) ou en visio.",
+    "h1": "Sophrologue près d’Arras — cabinet ou visio",
+    "Metadatas": {
+      "Titre_page": "Sophrologue à Arras | RDV cabinet ou visio | Le Petit Bourgeon",
+      "Description_page": "Sophrologie pour les habitants d’Arras et alentours. Séances au cabinet à Pas-en-Artois ou en visioconférence. Prenez RDV."
+    },
+    "couleur_page": "#6da7a0",
+    "faq": [
+      {
+        "question": "Proposez-vous des séances pour les personnes à Arras ?",
+        "reponse": "Oui. Vous pouvez venir au cabinet à Pas-en-Artois ou réserver une séance en visio depuis Arras."
+      },
+      {
+        "question": "Comment prendre rendez-vous ?",
+        "reponse": "Via la page de prise de rendez-vous en ligne (/funnel) pour choisir une première rencontre ou une séance."
+      }
+    ],
+    "hero": {
+      "titre": "Sophrologie à Arras :",
+      "titre_emphase": "retrouvez l’équilibre",
+      "texte": "Accompagnement depuis Arras et l’agglo — cabinet à Pas-en-Artois ou visio. Placeholder.",
+      "cta_principal": { "titre": "Prendre rendez-vous", "lien": "/funnel" },
+      "cta_secondaire": { "titre": "Découvrir la sophrologie", "lien": "/prestations/sophrologie" },
+      "note": "4.9/5",
+      "preuve_sociale": "+100 clients accompagnés"
+    },
+    "pages_liees": [
+      { "titre": "Sophrologie à Pas-en-Artois", "lien": "/landing/sophrologie-pas-en-artois" },
+      { "titre": "Sophrologie à Doullens", "lien": "/landing/sophrologie-doullens" },
+      { "titre": "Sophrologie en visio", "lien": "/landing/sophrologie-visio" },
+      { "titre": "Prendre rendez-vous", "lien": "/funnel" }
+    ]
+  },
+  {
+    "titre": "Sophrologie Doullens",
+    "slug": "sophrologie-doullens",
+    "localite": "Doullens",
+    "mode": "hybride",
+    "zones_desservies": "Doullens et communes du Doullennais ; séances au cabinet de Pas-en-Artois ou en visio.",
+    "h1": "Sophrologue près de Doullens — cabinet ou visio",
+    "Metadatas": {
+      "Titre_page": "Sophrologue à Doullens | RDV cabinet ou visio | Le Petit Bourgeon",
+      "Description_page": "Séances de sophrologie pour Doullens et alentours. Cabinet à Pas-en-Artois ou visioconférence. Réservez votre RDV."
+    },
+    "couleur_page": "#6da7a0",
+    "faq": [
+      {
+        "question": "Puis-je faire de la sophrologie en vivant à Doullens ?",
+        "reponse": "Oui. Le cabinet à Pas-en-Artois est accessible depuis Doullens, et les séances en visio sont disponibles."
+      }
+    ],
+    "hero": {
+      "titre": "Sophrologie près de Doullens :",
+      "titre_emphase": "un accompagnement adapté",
+      "texte": "Pour les habitants de Doullens et du Doullennais. Placeholder — texte définitif dans Strapi.",
+      "cta_principal": { "titre": "Prendre rendez-vous", "lien": "/funnel" },
+      "cta_secondaire": { "titre": "Découvrir la sophrologie", "lien": "/prestations/sophrologie" },
+      "note": "4.9/5",
+      "preuve_sociale": "+100 clients accompagnés"
+    },
+    "pages_liees": [
+      { "titre": "Sophrologie à Pas-en-Artois", "lien": "/landing/sophrologie-pas-en-artois" },
+      { "titre": "Sophrologie à Arras", "lien": "/landing/sophrologie-arras" },
+      { "titre": "Sophrologie en visio", "lien": "/landing/sophrologie-visio" },
+      { "titre": "Prendre rendez-vous", "lien": "/funnel" }
+    ]
+  },
+  {
+    "titre": "Sophrologie en visio",
+    "slug": "sophrologie-visio",
+    "localite": "Visio",
+    "mode": "visio",
+    "zones_desservies": "Toute la France en visioconférence. Idéal si vous êtes éloigné du cabinet de Pas-en-Artois.",
+    "h1": "Sophrologie en visio — séances à distance",
+    "Metadatas": {
+      "Titre_page": "Sophrologie en visio | RDV à distance | Le Petit Bourgeon",
+      "Description_page": "Séances de sophrologie en visioconférence depuis chez vous. Même qualité d’accompagnement qu’au cabinet. Prenez rendez-vous."
+    },
+    "couleur_page": "#94c9da",
+    "faq": [
+      {
+        "question": "La sophrologie en visio est-elle aussi efficace qu’en cabinet ?",
+        "reponse": "Oui. Les protocoles s’adaptent parfaitement à la visioconférence, avec le même cadre bienveillant."
+      },
+      {
+        "question": "De quoi ai-je besoin pour une séance en visio ?",
+        "reponse": "Un endroit calme, une connexion internet stable et un ordinateur, tablette ou téléphone."
+      }
+    ],
+    "hero": {
+      "titre": "Sophrologie en visio :",
+      "titre_emphase": "chez vous, où que vous soyez",
+      "texte": "Séances à distance pour cultiver votre équilibre. Placeholder.",
+      "cta_principal": { "titre": "Prendre rendez-vous", "lien": "/funnel" },
+      "cta_secondaire": { "titre": "Découvrir la sophrologie", "lien": "/prestations/sophrologie" },
+      "note": "4.9/5",
+      "preuve_sociale": "+100 clients accompagnés"
+    },
+    "pages_liees": [
+      { "titre": "Sophrologie à Pas-en-Artois", "lien": "/landing/sophrologie-pas-en-artois" },
+      { "titre": "Sophrologie à Arras", "lien": "/landing/sophrologie-arras" },
+      { "titre": "Sophrologie à Doullens", "lien": "/landing/sophrologie-doullens" },
+      { "titre": "Prendre rendez-vous", "lien": "/funnel" }
+    ]
+  }
+]

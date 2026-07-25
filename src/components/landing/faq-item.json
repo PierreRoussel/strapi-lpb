@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_landing_faq_items",
+  "info": {
+    "displayName": "FaqItem",
+    "icon": "question",
+    "description": "Question / réponse FAQ locale"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "reponse": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

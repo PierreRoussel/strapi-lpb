@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_landing_stats_bars",
+  "info": {
+    "displayName": "StatsBar",
+    "icon": "chart-line",
+    "description": "Barre de statistiques"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "landing.stat-item"
+    }
+  }
+}

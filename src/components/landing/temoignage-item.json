@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_landing_temoignage_items",
+  "info": {
+    "displayName": "TemoignageItem",
+    "icon": "quote-right",
+    "description": "Entrée témoignage landing"
+  },
+  "options": {},
+  "attributes": {
+    "citation": {
+      "type": "text",
+      "required": true
+    },
+    "nom": {
+      "type": "string",
+      "required": true
+    },
+    "role": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

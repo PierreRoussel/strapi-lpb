@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_landing_temoignages",
+  "info": {
+    "displayName": "Temoignages",
+    "icon": "comments",
+    "description": "Section témoignages landing"
+  },
+  "options": {},
+  "attributes": {
+    "titre_section": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "component",
+      "repeatable": true,
+      "component": "landing.temoignage-item"
+    }
+  }
+}

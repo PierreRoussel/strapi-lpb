@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_landing_heroes",
+  "info": {
+    "displayName": "Hero",
+    "icon": "landscape",
+    "description": "Hero landing avec CTAs et preuve sociale"
+  },
+  "options": {},
+  "attributes": {
+    "titre": {
+      "type": "string",
+      "required": true
+    },
+    "titre_emphase": {
+      "type": "string"
+    },
+    "texte": {
+      "type": "text"
+    },
+    "illustration": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "cta_principal": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.bouton"
+    },
+    "cta_secondaire": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.bouton"
+    },
+    "note": {
+      "type": "string"
+    },
+    "preuve_sociale": {
+      "type": "string"
+    },
+    "avatars": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

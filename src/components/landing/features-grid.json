@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_landing_features_grids",
+  "info": {
+    "displayName": "FeaturesGrid",
+    "icon": "layer-group",
+    "description": "Grille de features (3 cartes typiquement)"
+  },
+  "options": {},
+  "attributes": {
+    "titre_section": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "landing.feature-item"
+    }
+  }
+}

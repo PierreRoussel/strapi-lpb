@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_landing_stat_items",
+  "info": {
+    "displayName": "StatItem",
+    "icon": "chart-bar",
+    "description": "Chiffre + label pour stats / barre de stats"
+  },
+  "options": {},
+  "attributes": {
+    "valeur": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "couleur": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    }
+  }
+}

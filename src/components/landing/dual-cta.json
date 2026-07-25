@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_landing_dual_ctas",
+  "info": {
+    "displayName": "DualCta",
+    "icon": "clone",
+    "description": "Double CTA ateliers + newsletter"
+  },
+  "options": {},
+  "attributes": {
+    "atelier_titre": {
+      "type": "string"
+    },
+    "atelier_texte": {
+      "type": "text"
+    },
+    "atelier_illustration": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "atelier_bouton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.bouton"
+    },
+    "atelier_couleur_fond": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "newsletter_titre": {
+      "type": "string"
+    },
+    "newsletter_texte": {
+      "type": "text"
+    },
+    "newsletter_couleur_fond": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    }
+  }
+}

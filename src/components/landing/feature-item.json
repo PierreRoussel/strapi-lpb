@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_landing_feature_items",
+  "info": {
+    "displayName": "FeatureItem",
+    "icon": "star",
+    "description": "Carte feature (icone Iconoir + texte)"
+  },
+  "options": {},
+  "attributes": {
+    "icone": {
+      "type": "string",
+      "required": true
+    },
+    "titre": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

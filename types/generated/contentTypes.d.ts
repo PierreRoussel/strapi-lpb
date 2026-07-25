@@ -1058,6 +1058,156 @@ export interface ApiEvenementEvenement extends Schema.CollectionType {
   };
 }
 
+export interface ApiLandingLanding extends Schema.CollectionType {
+  collectionName: 'landings';
+  info: {
+    singularName: 'landing';
+    pluralName: 'landings';
+    displayName: 'Landing';
+    description: 'Landing pages locales (1 entr\u00E9e = 1 ville / mode)';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    titre: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slug: Attribute.UID<'api::landing.landing', 'titre'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    localite: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    mode: Attribute.Enumeration<['cabinet', 'visio', 'hybride']> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<'hybride'>;
+    zones_desservies: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    h1: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Metadatas: Attribute.Component<'seo.seo-metadatas'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    couleur_page: Attribute.String &
+      Attribute.CustomField<'plugin::color-picker.color'>;
+    faq: Attribute.Component<'landing.faq-item', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    hero: Attribute.Component<'landing.hero'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    features: Attribute.Component<'landing.features-grid'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    section_1: Attribute.Component<'landing.img-texte'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    section_2: Attribute.Component<'landing.img-texte'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    temoignages: Attribute.Component<'landing.temoignages'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    dual_cta: Attribute.Component<'landing.dual-cta'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    stats_bar: Attribute.Component<'landing.stats-bar'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    cta_final: Attribute.Component<'basic.wide-bloc-cta'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    pages_liees: Attribute.Component<'basic.bouton', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::landing.landing',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::landing.landing',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::landing.landing',
+      'oneToMany',
+      'api::landing.landing'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiLinktreeLinktree extends Schema.SingleType {
   collectionName: 'linktrees';
   info: {
@@ -1716,6 +1866,7 @@ declare module '@strapi/types' {
       'api::cible.cible': ApiCibleCible;
       'api::cta-global-atelier.cta-global-atelier': ApiCtaGlobalAtelierCtaGlobalAtelier;
       'api::evenement.evenement': ApiEvenementEvenement;
+      'api::landing.landing': ApiLandingLanding;
       'api::linktree.linktree': ApiLinktreeLinktree;
       'api::ou-me-trouver.ou-me-trouver': ApiOuMeTrouverOuMeTrouver;
       'api::page-conference.page-conference': ApiPageConferencePageConference;
