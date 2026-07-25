@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_blocks_page_headers",
+  "info": {
+    "displayName": "PageHeader",
+    "icon": "layout",
+    "description": "En-tête type prestation avec titre, description, bouton et illustration"
+  },
+  "options": {},
+  "attributes": {
+    "titre": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "bouton_titre": {
+      "type": "string"
+    },
+    "bouton_lien": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

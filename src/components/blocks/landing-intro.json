@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_landing_intros",
+  "info": {
+    "displayName": "LandingIntro",
+    "icon": "landscape",
+    "description": "Introduction centrée avec sous-titre et bandeau décoratif"
+  },
+  "options": {},
+  "attributes": {
+    "titre": {
+      "type": "string",
+      "required": true
+    },
+    "sous_titre": {
+      "type": "string"
+    },
+    "texte": {
+      "type": "richtext"
+    }
+  }
+}

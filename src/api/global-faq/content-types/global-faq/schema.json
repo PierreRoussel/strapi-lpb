@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "global_faqs",
+  "info": {
+    "singularName": "global-faq",
+    "pluralName": "global-faqs",
+    "displayName": "FAQ globale",
+    "description": "Questions/réponses partagées sur tout le site"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "section_titre": {
+      "type": "string"
+    },
+    "section_description": {
+      "type": "text"
+    },
+    "bouton_texte": {
+      "type": "string"
+    },
+    "section_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "section_image_url": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.faq-entry"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_blocks_prestation_cards",
+  "info": {
+    "displayName": "PrestationCard",
+    "icon": "grid",
+    "description": "Carte de prestation"
+  },
+  "options": {},
+  "attributes": {
+    "overline": {
+      "type": "string"
+    },
+    "titre": {
+      "type": "string",
+      "required": true
+    },
+    "texte": {
+      "type": "richtext"
+    },
+    "lien": {
+      "type": "string"
+    },
+    "lien_texte": {
+      "type": "string"
+    },
+    "illustration": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "illustration_url": {
+      "type": "string"
+    }
+  }
+}

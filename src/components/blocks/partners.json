@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_blocks_partners",
+  "info": {
+    "displayName": "Partners",
+    "icon": "briefcase",
+    "description": "Emplacement du bandeau partenaires (données globales)"
+  },
+  "options": {},
+  "attributes": {}
+}

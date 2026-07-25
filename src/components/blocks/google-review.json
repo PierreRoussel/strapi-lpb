@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blocks_google_reviews",
+  "info": {
+    "displayName": "GoogleReview",
+    "icon": "star",
+    "description": "Encart pour inviter à laisser un avis Google"
+  },
+  "options": {},
+  "attributes": {
+    "texte": {
+      "type": "string"
+    },
+    "lien": {
+      "type": "string"
+    }
+  }
+}

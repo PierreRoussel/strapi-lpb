@@ -23,6 +23,7 @@
     "strapi-plugin-populate-deep": "^2.0.0",
     "strapi-provider-email-brevo": "^1.0.4",
     "strapi-provider-email-resend": "^1.0.4",
+    "strapi-provider-upload-cloudinary-buffered": "file:providers/strapi-provider-upload-cloudinary-buffered",
     "styled-components": "^5.3.11"
   },
   "author": {

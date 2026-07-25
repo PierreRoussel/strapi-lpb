@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_blocks_promote_blogs",
+  "info": {
+    "displayName": "PromoteBlog",
+    "icon": "book",
+    "description": "Bandeau promotionnel du blog avec articles récents"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "titre": {
+      "type": "string"
+    },
+    "texte": {
+      "type": "richtext"
+    },
+    "bouton_titre": {
+      "type": "string"
+    },
+    "bouton_lien": {
+      "type": "string"
+    },
+    "nombre": {
+      "type": "integer",
+      "default": 3
+    }
+  }
+}

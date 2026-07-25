@@ -1058,6 +1058,149 @@ export interface ApiEvenementEvenement extends Schema.CollectionType {
   };
 }
 
+export interface ApiGlobalFaqGlobalFaq extends Schema.SingleType {
+  collectionName: 'global_faqs';
+  info: {
+    singularName: 'global-faq';
+    pluralName: 'global-faqs';
+    displayName: 'FAQ globale';
+    description: 'Questions/r\u00E9ponses partag\u00E9es sur tout le site';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    section_titre: Attribute.String;
+    section_description: Attribute.Text;
+    bouton_texte: Attribute.String;
+    section_image: Attribute.Media;
+    section_image_url: Attribute.String;
+    entries: Attribute.Component<'blocks.faq-entry', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::global-faq.global-faq',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::global-faq.global-faq',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiGlobalPartnersGlobalPartners extends Schema.SingleType {
+  collectionName: 'global_partners';
+  info: {
+    singularName: 'global-partners';
+    pluralName: 'global-partners-collection';
+    displayName: 'Partenaires globaux';
+    description: 'Bandeau \u00AB Ils nous font confiance \u00BB partag\u00E9 sur tout le site';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    tag: Attribute.String;
+    titre: Attribute.String;
+    description: Attribute.Text;
+    entries: Attribute.Component<'blocks.partner-entry', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::global-partners.global-partners',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::global-partners.global-partners',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiGlobalPrestationsGlobalPrestations
+  extends Schema.SingleType {
+  collectionName: 'global_prestations';
+  info: {
+    singularName: 'global-prestations';
+    pluralName: 'global-prestations-collection';
+    displayName: 'Prestations globales';
+    description: 'Grille des prestations partag\u00E9e sur tout le site';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    titre: Attribute.String;
+    cta_titre: Attribute.String;
+    cta_texte: Attribute.String;
+    cta_lien: Attribute.String;
+    entries: Attribute.Component<'blocks.prestation-card', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::global-prestations.global-prestations',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::global-prestations.global-prestations',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiGlobalTemoignagesGlobalTemoignages
+  extends Schema.SingleType {
+  collectionName: 'global_temoignages';
+  info: {
+    singularName: 'global-temoignages';
+    pluralName: 'global-temoignages-collection';
+    displayName: 'T\u00E9moignages globaux';
+    description: "Donn\u00E9es partag\u00E9es du carousel d'avis sur tout le site";
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    titre: Attribute.String;
+    cta_texte: Attribute.String;
+    cta_lien: Attribute.String;
+    cta_couleur: Attribute.String &
+      Attribute.CustomField<'plugin::color-picker.color'>;
+    entries: Attribute.Component<'blocks.testimonial-entry', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::global-temoignages.global-temoignages',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::global-temoignages.global-temoignages',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiLinktreeLinktree extends Schema.SingleType {
   collectionName: 'linktrees';
   info: {
@@ -1118,6 +1261,41 @@ export interface ApiLinktreeLinktree extends Schema.SingleType {
   };
 }
 
+export interface ApiNavigationNavigation extends Schema.SingleType {
+  collectionName: 'navigations';
+  info: {
+    singularName: 'navigation';
+    pluralName: 'navigations';
+    displayName: 'Navigation';
+    description: 'Liens de navigation header et footer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    prestations_links: Attribute.Component<'navigation.nav-link', true>;
+    ressources_links: Attribute.Component<'navigation.nav-link', true>;
+    about_links: Attribute.Component<'navigation.nav-link', true>;
+    le_jardin_links: Attribute.Component<'navigation.nav-link', true>;
+    footer_links: Attribute.Component<'navigation.nav-link', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::navigation.navigation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::navigation.navigation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiOuMeTrouverOuMeTrouver extends Schema.SingleType {
   collectionName: 'ou_me_trouvers';
   info: {
@@ -1145,6 +1323,56 @@ export interface ApiOuMeTrouverOuMeTrouver extends Schema.SingleType {
       'oneToOne',
       'admin::user'
     > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPagePage extends Schema.CollectionType {
+  collectionName: 'pages';
+  info: {
+    singularName: 'page';
+    pluralName: 'pages';
+    displayName: 'Page';
+    description: 'Pages \u00E9ditables via le page-builder visuel';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    titre: Attribute.String & Attribute.Required;
+    slug: Attribute.UID<'api::page.page', 'titre'> & Attribute.Required;
+    metadatas: Attribute.Component<'seo.seo-metadatas'>;
+    couleur_page: Attribute.String &
+      Attribute.CustomField<'plugin::color-picker.color'>;
+    blocks: Attribute.DynamicZone<
+      [
+        'blocks.hero',
+        'blocks.rich-text',
+        'blocks.section-title',
+        'blocks.faq',
+        'blocks.temoignages',
+        'blocks.prestations-grid',
+        'blocks.articles-preview',
+        'blocks.contact-form',
+        'blocks.horizontal-cards',
+        'blocks.atelier-cta',
+        'blocks.partners',
+        'blocks.page-header',
+        'blocks.landing-intro',
+        'blocks.promote-blog',
+        'blocks.google-review',
+        'basic.img-display',
+        'basic.bloc-cta',
+        'basic.wide-bloc-cta',
+        'basic.lieux'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -1680,8 +1908,14 @@ declare module '@strapi/types' {
       'api::cible.cible': ApiCibleCible;
       'api::cta-global-atelier.cta-global-atelier': ApiCtaGlobalAtelierCtaGlobalAtelier;
       'api::evenement.evenement': ApiEvenementEvenement;
+      'api::global-faq.global-faq': ApiGlobalFaqGlobalFaq;
+      'api::global-partners.global-partners': ApiGlobalPartnersGlobalPartners;
+      'api::global-prestations.global-prestations': ApiGlobalPrestationsGlobalPrestations;
+      'api::global-temoignages.global-temoignages': ApiGlobalTemoignagesGlobalTemoignages;
       'api::linktree.linktree': ApiLinktreeLinktree;
+      'api::navigation.navigation': ApiNavigationNavigation;
       'api::ou-me-trouver.ou-me-trouver': ApiOuMeTrouverOuMeTrouver;
+      'api::page.page': ApiPagePage;
       'api::page-conference.page-conference': ApiPageConferencePageConference;
       'api::page-podcast.page-podcast': ApiPagePodcastPagePodcast;
       'api::page-tarif.page-tarif': ApiPageTarifPageTarif;

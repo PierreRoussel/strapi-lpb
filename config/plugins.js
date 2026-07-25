@@ -6,15 +6,17 @@ module.exports = ({ env }) => ({
   },
   upload: {
     config: {
-      provider: "cloudinary",
+      // Buffered Cloudinary provider — avoids stream timeouts on Content-API uploads
+      // (Admin Media Library was fine; /api/upload from the builder was not).
+      provider: "strapi-provider-upload-cloudinary-buffered",
       providerOptions: {
         cloud_name: env("CLOUD_NAME", ""),
         api_key: env("CLOUD_API_KEY", ""),
         api_secret: env("CLOUD_API_SECRET", ""),
+        timeout: 120000,
       },
       actionOptions: {
         upload: {},
-        uploadStream: {},
         delete: {},
       },
     },

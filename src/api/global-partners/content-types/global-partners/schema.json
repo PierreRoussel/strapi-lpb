@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "global_partners",
+  "info": {
+    "singularName": "global-partners",
+    "pluralName": "global-partners-collection",
+    "displayName": "Partenaires globaux",
+    "description": "Bandeau « Ils nous font confiance » partagé sur tout le site"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "titre": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "entries": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.partner-entry"
+    }
+  }
+}

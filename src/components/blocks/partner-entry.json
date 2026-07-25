@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_blocks_partner_entries",
+  "info": {
+    "displayName": "PartnerEntry",
+    "icon": "briefcase",
+    "description": "Partenaire (logo + lien)"
+  },
+  "options": {},
+  "attributes": {
+    "nom": {
+      "type": "string",
+      "required": true
+    },
+    "lien": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "logo_url": {
+      "type": "string"
+    }
+  }
+}

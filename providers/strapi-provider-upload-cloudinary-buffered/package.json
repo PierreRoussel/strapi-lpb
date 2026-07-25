@@ -1,0 +1,7 @@
+{
+  "name": "strapi-provider-upload-cloudinary-buffered",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "description": "Cloudinary upload provider that buffers files before upload (avoids stream timeouts)"
+}
